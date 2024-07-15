@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/listloom/static/css/main.f4649e08.css",
+    "main.js": "/listloom/static/js/main.4aff045d.js",
+    "static/js/453.98e39abe.chunk.js": "/listloom/static/js/453.98e39abe.chunk.js",
+    "index.html": "/listloom/index.html",
+    "main.f4649e08.css.map": "/listloom/static/css/main.f4649e08.css.map",
+    "main.4aff045d.js.map": "/listloom/static/js/main.4aff045d.js.map",
+    "453.98e39abe.chunk.js.map": "/listloom/static/js/453.98e39abe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4649e08.css",
+    "static/js/main.4aff045d.js"
+  ]
+}
