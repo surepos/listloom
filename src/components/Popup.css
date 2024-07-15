@@ -1,0 +1,190 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popupInner {
+  position: relative;
+  padding: 32px;
+  width: 70%;
+  max-width: 450px;
+  background-color: #1e1e1e;
+  border-radius: 60px;
+  height: 60%;
+  max-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.popupInner .innerTitle {
+  color: #cebea4;
+  font-size: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  margin-top: 40px;
+}
+.popupInner .closeForm {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.42s ease-in-out;
+  animation: fadeIn 0s ease-in-out 0s forwards;
+  opacity: 0;
+}
+
+.popupInner .closeForm:hover {
+  color: white;
+  border: none;
+}
+.popupInner .closeForm:hover::before {
+  width: 200%;
+  height: 300%;
+  border-radius: 100%;
+}
+.popupInner .closeForm::before {
+  content: '';
+  background-color: #ff5631;
+  position: absolute;
+  width: 0%;
+  bottom: 0;
+  left: 50%;
+  height: 0%;
+  transition: 0.42s ease-in-out;
+  z-index: -1;
+  transform: translateX(-50%) translateY(50%);
+}
+
+.popupInner .closeForm img {
+  width: 20px;
+}
+.popupInner .form {
+  width: 80%;
+  max-width: 440px;
+}
+
+.popupInner .form label {
+  color: #cebea4;
+  font-family: 'Nunito', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.1rem;
+}
+.popupInner .form input {
+  height: 30px;
+  width: 100%;
+  max-width: 400px;
+  color: #cebea4;
+  outline: none;
+  border: none;
+  background-color: #0d0d0d;
+  border-radius: 30px;
+  padding-left: 20px;
+  font-family: 'Nunito', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+.popupInner .form .formButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.popupInner .form .formButton button {
+  font-family: 'Nunito', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  letter-spacing: 0.25rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.42s ease-in-out;
+  animation: fadeIn 0s ease-in-out 0s forwards;
+  opacity: 0;
+  border-radius: 32px;
+}
+.popupInner .form .formButton button:hover {
+  color: white;
+}
+.popupInner .form .formButton button:hover::before {
+  width: 200%;
+  height: 300%;
+  border-radius: 100%;
+}
+.popupInner .form .formButton button::before {
+  content: '';
+  background-color: #ff5631;
+  position: absolute;
+  width: 0%;
+  bottom: 0;
+  left: 50%;
+  height: 0%;
+  transition: 0.42s ease-in-out;
+  z-index: -1;
+  transform: translateX(-50%) translateY(50%);
+}
+button span {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.popupInner .form .formButton img {
+  width: 30px;
+}
+
+.date-picker-container {
+  position: relative;
+}
+.date-picker-container input {
+  height: 30px;
+  padding: 1px 2px 1px 20px;
+}
+
+/* .dateInput::-webkit-calendar-picker-indicator {
+  display: none;
+} */
+
+.date-picker-icon {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  margin-right: -10px;
+}
+.date-picker-icon img {
+}
