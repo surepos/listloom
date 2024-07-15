@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Popup.css';
+import arrow from "../images/arrow.png"
+import dateSelection from "../images/calendar2.png"
+import closePopup from "../images/close.png"
 
 function Popup(props) {
   const [task, setTask] = useState('');
@@ -63,13 +66,13 @@ function Popup(props) {
                 onChange={(e) => setTaskDate(e.target.value)}
                 required
               />
-              <img src="/calendar2.png" alt="" className="date-picker-icon" />
+              <img src={dateSelection} alt="" className="date-picker-icon" />
             </div>
             <div className="formButton">
               <button type="submit">
                 Add{' '}
                 <span>
-                  <img src="/arrow.png" alt="Arrow" />
+                  <img src={arrow} alt="Arrow" />
                 </span>
               </button>
             </div>
@@ -79,7 +82,7 @@ function Popup(props) {
         <button
           className="closeForm"
           onClick={() => props.setTrigger(false)}>
-          <img src="/close.png" alt="Exit" />
+          <img src={closePopup} alt="Exit" />
         </button>
       </div>
     </div>

@@ -4,6 +4,14 @@ import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import Popup from './components/Popup';
 import axios from "axios";
 import lottie from "lottie-web";
+import addImage from "./images/plus.png"
+import caland from "./images/calend.png"
+import circleImage from "./images/circle.png"
+import filledCircle from "./images/filledCircle.png"
+import edit from "./images/edit.png";
+import deleteImage from "./images/trash.png";
+import saveImage from "./images/check.png"
+import cancelImage from "./images/cancel.png"
 
 
 function App() {
@@ -127,10 +135,10 @@ function App() {
                <div className='headerTitle'>List<span>Loom</span></div>
                <div className='headerButton'>
                    <div className='addTask'>
-                       <button onClick={() => {setFormDisplay(true)}}><img src="/plus.png" alt="Add" /></button>
+                       <button onClick={() => {setFormDisplay(true)}}><img src={addImage} alt="Add" /></button>
                    </div>
                    <div className='nextDay'>
-                       <img src="/calend.png" alt="NextDay" />
+                       <img src={caland} alt="NextDay" />
                        <input type="date" name="displayDate" className='datePicker'  value={displayDate.toISOString().split('T')[0]} onChange={handleDateChange}/>
                    </div>
                </div>
@@ -150,7 +158,7 @@ function App() {
                    <div className='taskContainer' key={task._id}>
                        <div className='taskInfo'>
                            <img
-                               src={taskDone[task._id] ? '/filledCircle.png' : '/circle.png'}
+                               src={taskDone[task._id] ? filledCircle : circleImage}
                                alt="Circle"
                                onClick={() => toggleTaskDone(task._id)}
                                className={taskDone[task._id] ? 'taskDone' : ''}
@@ -169,13 +177,13 @@ function App() {
                        <div className='taskEdit'>
                            {editingTask === task._id ? (
                                <>
-                                   <img onClick={() => handleSaveTask(task._id)} className='editButton save' src="/check.png" alt="Save"/>
-                                   <img  onClick={handleCancelEdit} className='editButton cancel' src="/cancel.png" alt="Save"/>
+                                   <img onClick={() => handleSaveTask(task._id)} className='editButton save' src={saveImage} alt="Save"/>
+                                   <img  onClick={handleCancelEdit} className='editButton cancel' src={cancelImage} alt="Save"/>
                                </>
                            ) : (
                                <>
-                                   <img src="/edit.png" alt="Edit" onClick={() => handleEditTask(task._id, task.task)} />
-                                   <img src="/trash.png" alt="Delete" onClick={() => deleteTask(task._id)}/>
+                                   <img src={edit} alt="Edit" onClick={() => handleEditTask(task._id, task.task)} />
+                                   <img src={deleteImage} alt="Delete" onClick={() => deleteTask(task._id)}/>
                                </>
                            )}
                        </div>
