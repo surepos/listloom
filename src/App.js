@@ -12,6 +12,8 @@ import edit from "./images/edit.png";
 import deleteImage from "./images/trash.png";
 import saveImage from "./images/check.png"
 import cancelImage from "./images/cancel.png"
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 
 function App() {
@@ -25,14 +27,12 @@ function App() {
    const dateInputRef = useRef(null);
    
    const container = useRef(null);
+   const [startDate, setStartDate] = useState(new Date());
+   const [showDatePicker, setShowDatePicker] = useState(false);
 
-   const triggerDatePicker = () => {
-    if (dateInputRef.current.showPicker) {
-        dateInputRef.current.showPicker();
-    } else {
-        dateInputRef.current.focus();
-    }
-}; 
+   const handleImageClick = () => {
+       setShowDatePicker(true);
+   };
    const handleRef = (element) => {
     if (element) {
       container.current = element;
@@ -110,12 +110,17 @@ function App() {
        }
    };
 
-   const handleDateChange = (e) => {
-       const newDate = new Date(e.target.value);
-       if (!isNaN(newDate.getTime())) {
-           setDisplayDate(newDate);
-       }
-   };
+//    const handleDateChange = (e) => {
+//        const newDate = new Date(e.target.value);
+//        if (!isNaN(newDate.getTime())) {
+//            setDisplayDate(newDate);
+//        }
+//    };
+   const handleDateChange = (date) => {
+    setStartDate(date);
+    setDisplayDate(date);
+    setShowDatePicker(false);
+};
 
    const handleEditTask = (taskId, taskText) => {
        setEditingTask(taskId);
@@ -153,17 +158,19 @@ function App() {
                    <div className='addTask'>
                        <button onClick={() => {setFormDisplay(true)}}><img src={addImage} alt="Add" /></button>
                    </div>
-                   <div className='nextDay' >
-            <img src={caland} alt="NextDay" onClick={triggerDatePicker} style={{ cursor: 'pointer' }} />
-            <input 
-                type="date" 
-                ref={dateInputRef}
-                name="displayDate" 
-                className='datePicker' 
-                value={displayDate.toISOString().split('T')[0]} 
-                onChange={handleDateChange} 
-
-            />
+                   <div className='nextDay'>
+            <img src={caland} alt="NextDay" onClick={handleImageClick} style={{ cursor: 'pointer' }} />
+            {showDatePicker && (
+                <div className='datePicker'>
+                    <DatePicker
+                    value={displayDate.toISOString().split('T')[0]} 
+                    selected={startDate}
+                    onChange={handleDateChange}
+                    inline
+                /> 
+                </div>
+                
+            )}
         </div>
                </div>
            </div>
