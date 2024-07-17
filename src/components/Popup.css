@@ -165,9 +165,11 @@ button span {
 }
 
 .date-picker-container {
+  width: 100%;
   position: relative;
 }
 .date-picker-container input {
+  width: 100%;
   padding: 1px 2px 1px 20px;
   
 }
@@ -188,8 +190,6 @@ button span {
   margin-right: -10px;
 }
 
-@media (max-width: 480px) {
-  .popupInner.form input {
-     max-width: none;
-   }
+@media (max-width: 600px) {
+  
  }
