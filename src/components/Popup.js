@@ -66,7 +66,7 @@ function Popup(props) {
                 onChange={(e) => setTaskDate(e.target.value)}
                 required
               />
-              <img src={dateSelection} alt="" className="date-picker-icon" />
+              {/* <img src={dateSelection} alt="" className="date-picker-icon" /> */}
             </div>
             <div className="formButton">
               <button type="submit">

@@ -295,14 +295,14 @@ body {
   .datePicker {
     position: absolute;
     top: 9px;
-    left: 7px;
+    left: 4px;
     background-color: #cebea4;
     border: none;
     outline: none;
   }
 
   .datePicker {
-    width: 5px;
+    width: 3px;
     height: 26%;
     padding: 0;
   }

@@ -168,22 +168,8 @@ button span {
   position: relative;
 }
 .date-picker-container input {
-  height: 30px;
-  width: 100%;
-  max-width: 400px;
-  color: #cebea4;
-  outline: none;
-  border: none;
-  background-color: #0d0d0d;
-  border-radius: 30px;
-  font-family: 'Nunito', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 1.1rem;
-  margin: 10px 0;
   padding: 1px 2px 1px 20px;
-  padding-left: 20px;
+  
 }
 
 /* .dateInput::-webkit-calendar-picker-indicator {
@@ -204,7 +190,7 @@ button span {
 .date-picker-icon img {
 }
 @media (max-width: 600px) {
-  .popupInner .form input {
-    width: 100%;
-  }
+  .date-picker-container input {
+    width: 100px;
+}
 }
