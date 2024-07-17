@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/listloom/static/css/main.6823e2ee.css",
-    "main.js": "/listloom/static/js/main.56be4534.js",
+    "main.js": "/listloom/static/js/main.79bab6fd.js",
     "static/js/453.15d747cc.chunk.js": "/listloom/static/js/453.15d747cc.chunk.js",
     "static/media/circle.png": "/listloom/static/media/circle.f096c4c3da7cd522220b.png",
     "static/media/plus.png": "/listloom/static/media/plus.b18112ea8797e1feb3cd.png",
     "static/media/filledCircle.png": "/listloom/static/media/filledCircle.d599ca211ebef311fff3.png",
     "index.html": "/listloom/index.html",
     "main.6823e2ee.css.map": "/listloom/static/css/main.6823e2ee.css.map",
-    "main.56be4534.js.map": "/listloom/static/js/main.56be4534.js.map",
+    "main.79bab6fd.js.map": "/listloom/static/js/main.79bab6fd.js.map",
     "453.15d747cc.chunk.js.map": "/listloom/static/js/453.15d747cc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6823e2ee.css",
-    "static/js/main.56be4534.js"
+    "static/js/main.79bab6fd.js"
   ]
 }
