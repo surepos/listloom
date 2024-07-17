@@ -24,19 +24,24 @@ function App() {
    const [editedTaskText, setEditedTaskText] = useState('');
    const container = useRef(null);
 
-   useEffect(() => {
-    const animationInstance = lottie.loadAnimation({
-        container: container.current,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: require('./noList.json'),
-    });
+   const handleRef = (element) => {
+    if (element) {
+      container.current = element;
+      if (tasks.length === 0) {
+        const animationInstance = lottie.loadAnimation({
+          container: container.current,
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          animationData: require('./noList.json'),
+        });
 
-    return () => {
-        animationInstance.destroy();
-    };
-}, [tasks]);
+        return () => {
+          animationInstance.destroy();
+        };
+      }
+    }
+  };
 
    useEffect(() => {
        const fetchTasks = async () => {
@@ -150,9 +155,9 @@ function App() {
                </div>
                <div className='taskDone'>{Object.values(taskDone).filter(done => done).length}/{tasks.length}</div>
            </div>
-           <div className='taskList'>
+           <div className='taskList' >
             {tasks.length === 0 ?  <div className="noTask">
-            <div className="svgWrapper"ref={container}></div>
+            <div className="svgWrapper"ref={handleRef}></div>
           </div> : 
                tasks.map((task) => (
                    <div className='taskContainer' key={task._id}>
