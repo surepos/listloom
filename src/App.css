@@ -294,7 +294,7 @@ body {
   }
   .datePicker {
     position: absolute;
-    top: 12px;
+    top: 9px;
     left: 7px;
     background-color: #cebea4;
     border: none;
@@ -302,7 +302,7 @@ body {
   }
 
   .datePicker {
-    width: 10px;
+    width: 5px;
     height: 26%;
     padding: 0;
   }
@@ -310,7 +310,5 @@ body {
     width: 40%;
     margin-bottom: 20%;
   }
-  .popupInner .form input {
-    width: 100%;
-  }
+ 
 }
