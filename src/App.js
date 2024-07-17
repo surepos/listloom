@@ -55,7 +55,7 @@ function App() {
    useEffect(() => {
        const fetchTasks = async () => {
            try {
-               const response = await axios.get(`http://localhost:8080/tasks/${displayDate.toISOString().split('T')[0]}`);
+               const response = await axios.get(`https://3402-211-186-131-234.ngrok-free.app/tasks/${displayDate.toISOString().split('T')[0]}`);
                setTasks(response.data);
                initializeTaskDoneState(response.data); 
            } catch (error) {
@@ -85,7 +85,7 @@ function App() {
 
    const toggleTaskDone = async (taskId) => {
        try {
-           const response = await axios.put(`https://3402-211-186-131-234.ngrok-free.app/task/${taskId}`);
+           const response = await axios.put(`http://localhost:8080/task/${taskId}`);
            const updatedTask = response.data;
 
            setTaskDone({
