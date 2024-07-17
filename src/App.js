@@ -55,7 +55,7 @@ function App() {
    useEffect(() => {
        const fetchTasks = async () => {
            try {
-               const response = await axios.get(`http://localhost:8080/tasks/${displayDate.toISOString().split('T')[0]}`);
+               const response = await axios.get(`/tasks/${displayDate.toISOString().split('T')[0]}`);
                setTasks(response.data);
                initializeTaskDoneState(response.data); 
            } catch (error) {
