@@ -85,7 +85,7 @@ function App() {
 
    const toggleTaskDone = async (taskId) => {
        try {
-           const response = await axios.put(`http://localhost:8080/task/${taskId}`);
+           const response = await axios.put(`https://3402-211-186-131-234.ngrok-free.app/task/${taskId}`);
            const updatedTask = response.data;
 
            setTaskDone({
@@ -110,12 +110,7 @@ function App() {
        }
    };
 
-//    const handleDateChange = (e) => {
-//        const newDate = new Date(e.target.value);
-//        if (!isNaN(newDate.getTime())) {
-//            setDisplayDate(newDate);
-//        }
-//    };
+
    const handleDateChange = (date) => {
     setStartDate(date);
     setDisplayDate(date);
