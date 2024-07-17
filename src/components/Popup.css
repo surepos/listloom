@@ -80,6 +80,9 @@
 .popupInner .form {
   width: 80%;
   max-width: 440px;
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 .popupInner .form label {
@@ -188,8 +191,9 @@ button span {
   pointer-events: none;
   margin-right: -10px;
 }
-.popupInner.form input[type="date"] {
-  width: 100%;
+input[type="date"] {
+  flex: 1 !important;
+  width: 100% !important;
   box-sizing: border-box;
 }
 
