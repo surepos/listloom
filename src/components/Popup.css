@@ -193,7 +193,7 @@ button span {
 }
 input[type="date"] {
   flex: 1 !important;
-  width: 100% !important;
+  width: 200% !important;
   box-sizing: border-box;
 }
 
