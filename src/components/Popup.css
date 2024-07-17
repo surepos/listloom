@@ -195,7 +195,7 @@ button span {
   }
   @media (max-width: 600px) {
     .date-picker-container input {
-      max-width: 100% !important;
+      max-width: 220px !important;
     }
   }
 }
