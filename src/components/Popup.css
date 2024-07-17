@@ -188,6 +188,10 @@ button span {
   pointer-events: none;
   margin-right: -10px;
 }
+.popupInner.form input[type="date"] {
+  width: 100%;
+  box-sizing: border-box;
+}
 
 @media (max-width: 600px) {
   .popupInner {
