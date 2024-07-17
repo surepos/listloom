@@ -72,7 +72,7 @@ function Popup(props) {
               <label htmlFor="input1">Enter your task</label>
               <br />
               <input
-                type="date"
+                type="text"
                 placeholder="Enter your task"
                 id="input1"
                 value={task}
