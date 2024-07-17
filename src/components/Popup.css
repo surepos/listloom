@@ -171,7 +171,6 @@ button span {
 .date-picker-container input {
   width: 100%;
   padding: 1px 2px 1px 20px;
-  
 }
 
 /* .dateInput::-webkit-calendar-picker-indicator {
@@ -191,7 +190,12 @@ button span {
 }
 
 @media (max-width: 600px) {
-  .date-picker-container input {
-    max-width: 100%;
+  .popupInner {
+    border-radius: 30px;
+  }
+  @media (max-width: 600px) {
+    .date-picker-container input {
+      max-width: 100% !important;
+    }
   }
 }
