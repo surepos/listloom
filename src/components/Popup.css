@@ -131,6 +131,9 @@
   transition: 0.42s ease-in-out;
   animation: fadeIn 0s ease-in-out 0s forwards;
   border-radius: 32px;
+  background-color: white;
+  color: #0d0d0d;
+  inline-size: none;
 }
 .popupInner .form .formButton button:hover {
   color: white;

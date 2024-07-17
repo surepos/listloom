@@ -302,12 +302,15 @@ body {
   }
 
   .datePicker {
-    width: 50%;
+    width: 10px;
     height: 26%;
     padding: 0;
   }
   .noTask img {
     width: 40%;
     margin-bottom: 20%;
+  }
+  .popupInner .form input {
+    width: 100%;
   }
 }
