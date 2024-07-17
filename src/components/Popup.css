@@ -80,8 +80,6 @@
 .popupInner .form {
   width: 80%;
   max-width: 440px;
-  display: flex;
-  flex-wrap: wrap;
 
 }
 
@@ -191,18 +189,14 @@ button span {
   pointer-events: none;
   margin-right: -10px;
 }
-input[type="date"] {
-  flex: 1 !important;
-  width: 200% !important;
-  box-sizing: border-box;
-}
+
 
 @media (max-width: 600px) {
   .popupInner {
     border-radius: 30px;
   }
   @media (max-width: 600px) {
-    .date-picker-container input {
+    input[type="date"] {
       max-width: 220px !important;
     }
   }
