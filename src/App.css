@@ -224,6 +224,7 @@ body {
   top: 50px; /* Adjust the top position */
   left: -120px; /* Adjust the left position */
   z-index: 1;
+  min-height: 300px;
 }
 
 .noTask {
@@ -291,5 +292,8 @@ body {
     width: 40%;
     margin-bottom: 20%;
   }
- 
+  .datePicker {
+    left: -200px; /* Adjust the left position */
+    
+  }
 }
