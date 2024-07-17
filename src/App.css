@@ -258,15 +258,13 @@ body {
   }
   .taskProgress {
     width: 80%;
-    padding: 30px;
-    gap: 20px;
   }
   .taskList {
     width: 100%;
   }
   .taskProgress .taskDone {
-    width: 90px;
-    height: 90px;
+    width: 160px;
+    height: 100px;
   }
   .taskList .taskContainer {
     width: 90%;
@@ -298,6 +296,6 @@ body {
     left: -200px;
   }
   .taskProgress .dateInfo .todo {
-    font-size: .3rem;
+    font-size: 2rem;
   }
 }
