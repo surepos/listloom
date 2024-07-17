@@ -27,7 +27,11 @@ function App() {
    const container = useRef(null);
 
    const triggerDatePicker = () => {
-    dateInputRef.current.showPicker();
+    if (dateInputRef.current.showPicker) {
+        dateInputRef.current.showPicker();
+    } else {
+        dateInputRef.current.focus();
+    }
 }; 
    const handleRef = (element) => {
     if (element) {
