@@ -215,21 +215,18 @@ body {
   position: relative;
   width: fit-content;
   height: fit-content;
+  display: flex;
+ align-items: center;
 }
+
 .datePicker {
   position: absolute;
-  top: 16px;
-  left: 12px;
-  background-color: #cebea4;
+  bottom: 0;
+  left: 0;
   border: none;
   outline: none;
-}
-.calendarIcon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  /* pointer-events: none;  */
+  padding: 0;
+  visibility: hidden;
 }
 
 .noTask {
@@ -292,20 +289,7 @@ body {
     padding: 2px;
     border-radius: 50%;
   }
-  .datePicker {
-    position: absolute;
-    top: 9px;
-    left: 4px;
-    background-color: #cebea4;
-    border: none;
-    outline: none;
-  }
 
-  .datePicker {
-    width: 1px;
-    height: 26%;
-    padding: 0;
-  }
   .noTask img {
     width: 40%;
     margin-bottom: 20%;

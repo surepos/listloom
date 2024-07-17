@@ -22,8 +22,13 @@ function App() {
    const [displayDate, setDisplayDate] = useState(new Date());
    const [editingTask, setEditingTask] = useState(null);
    const [editedTaskText, setEditedTaskText] = useState('');
+   const dateInputRef = useRef(null);
+   
    const container = useRef(null);
 
+   const triggerDatePicker = () => {
+    dateInputRef.current.showPicker();
+}; 
    const handleRef = (element) => {
     if (element) {
       container.current = element;
@@ -103,7 +108,9 @@ function App() {
 
    const handleDateChange = (e) => {
        const newDate = new Date(e.target.value);
-       setDisplayDate(newDate);
+       if (!isNaN(newDate.getTime())) {
+           setDisplayDate(newDate);
+       }
    };
 
    const handleEditTask = (taskId, taskText) => {
@@ -142,10 +149,18 @@ function App() {
                    <div className='addTask'>
                        <button onClick={() => {setFormDisplay(true)}}><img src={addImage} alt="Add" /></button>
                    </div>
-                   <div className='nextDay'>
-                       <img src={caland} alt="NextDay" />
-                       <input type="date" name="displayDate" className='datePicker'  value={displayDate.toISOString().split('T')[0]} onChange={handleDateChange}/>
-                   </div>
+                   <div className='nextDay' >
+            <img src={caland} alt="NextDay" onClick={triggerDatePicker} style={{ cursor: 'pointer' }} />
+            <input 
+                type="date" 
+                ref={dateInputRef}
+                name="displayDate" 
+                className='datePicker' 
+                value={displayDate.toISOString().split('T')[0]} 
+                onChange={handleDateChange} 
+
+            />
+        </div>
                </div>
            </div>
            <div className='taskProgress'>
@@ -157,7 +172,7 @@ function App() {
            </div>
            <div className='taskList' >
             {tasks.length === 0 ?  <div className="noTask">
-            <div className="svgWrapper"ref={handleRef}></div>
+            <div className="svgWrapper" ref={handleRef}></div>
           </div> : 
                tasks.map((task) => (
                    <div className='taskContainer' key={task._id}>
