@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import './Popup.css';
-import arrow from "../images/arrow.png"
-import dateSelection from "../images/calendar2.png"
-import closePopup from "../images/close.png"
+import arrow from '../images/arrow.png';
+import closePopup from '../images/close.png';
 
-function Popup(props) {
+function Popup({ trigger, setTrigger, displayDate, setTasks }) {
   const [task, setTask] = useState('');
   const [taskDate, setTaskDate] = useState('');
   const [error, setError] = useState('');
-
-  
-
- 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,22 +15,24 @@ function Popup(props) {
       const response = await axios.post('http://localhost:8080/search', {
         task,
         taskDate,
-        displayDate: props.displayDate
+        displayDate,
       });
 
       if (response.data) {
-        props.setTasks(response.data.tasks); 
+        setTasks(response.data.tasks);
         setError('');
         setTask('');
         setTaskDate('');
-        props.setTrigger(false);
+        setTrigger(false);
       }
     } catch (error) {
       setError('Failed to fetch data. Please try again.');
     }
   };
 
-  return props.trigger ? (
+  if (!trigger) return null;
+
+  return (
     <div className="popup">
       <div className="popupInner">
         <div className="innerTitle">
@@ -66,28 +63,21 @@ function Popup(props) {
                 onChange={(e) => setTaskDate(e.target.value)}
                 required
               />
-              {/* <img src={dateSelection} alt="" className="date-picker-icon" /> */}
             </div>
-           
             <div className="formButton">
               <button type="submit">
-                Add{' '}
-                <span>
-                  <img src={arrow} alt="Arrow" />
-                </span>
+                Add <span><img src={arrow} alt="Arrow" /></span>
               </button>
             </div>
           </form>
         </div>
         {error && <div className="error">{error}</div>}
-        <button
-          className="closeForm"
-          onClick={() => props.setTrigger(false)}>
+        <button className="closeForm" onClick={() => setTrigger(false)}>
           <img src={closePopup} alt="Exit" />
         </button>
       </div>
     </div>
-  ) : null;
+  );
 }
 
 export default Popup;
