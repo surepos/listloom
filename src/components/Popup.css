@@ -107,6 +107,7 @@
   font-style: normal;
   font-size: 1.1rem;
   margin: 10px 0;
+  box-sizing: border-box;
 }
 .popupInner .form .formButton {
   display: flex;
@@ -193,13 +194,22 @@ button span {
 
 
 @media (max-width: 600px) {
-    .popupInner .form input[type="text"],
-    .popupInner .form input[type="date"] {
-      width: 100%;
-      max-width: 100%;
-    }
-    .popupInner .form input[type="date"] {
-      padding-right: 50px;
-    }
+  .popupInner {
+    width: 80%;
+    padding: 20px;
   }
+
+  .popupInner .form input {
+    padding: 18px 10px;
+  }
+
+  .formButton {
+    justify-content: center;
+  }
+
+  .form input[type="text"],
+  .form input[type="date"] {
+    width: 100%; /* Ensure both inputs have the same width */
+  }
+}
 
