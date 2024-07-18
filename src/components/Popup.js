@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './Popup.css';
 import arrow from "../images/arrow.png"
@@ -10,6 +10,7 @@ function Popup(props) {
   const [task, setTask] = useState('');
   const [taskDate, setTaskDate] = useState('');
   const [error, setError] = useState('');
+  
 
   
 
@@ -61,23 +62,18 @@ function Popup(props) {
               <br />
               
               <div className="dateInput">
-               <img src={dateSelection} alt="" className="date-picker-icon" /> 
+               <img src={dateSelection} alt="" className="date-picker-icon"  /> 
                <DatePicker
-             
+               
                 selected={taskDate}
+                placeholderText='mm/dd/yy'
                 onChange={(date) => setTaskDate(date)}
                 id="input2"
                 required
+               
               /></div>
               
-              {/* <input
-                className="dateInput"
-                type="date"
-                id="input2"
-                value={taskDate}
-                onChange={(e) => setTaskDate(e.target.value)}
-                required
-              /> */}
+             
              
             </div>
            
