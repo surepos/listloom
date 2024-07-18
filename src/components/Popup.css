@@ -192,12 +192,10 @@ button span {
 
 
 @media (max-width: 600px) {
-  .popupInner {
-    border-radius: 30px;
-  }
-  @media (max-width: 600px) {
-    input[type="date"] {
-      max-width: 220px !important;
+    .popupInner .form input[type="text"],
+    .popupInner .form input[type="date"] {
+      width: 100%;
+      max-width: 100%;
     }
   }
-}
+
