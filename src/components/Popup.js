@@ -59,8 +59,10 @@ function Popup(props) {
             <div className="date-picker-container">
               <label htmlFor="input2">Enter task date</label>
               <br />
+              
               <div className="dateInput">
-                <DatePicker
+               <img src={dateSelection} alt="" className="date-picker-icon" /> 
+               <DatePicker
              
                 selected={taskDate}
                 onChange={(date) => setTaskDate(date)}
@@ -76,7 +78,7 @@ function Popup(props) {
                 onChange={(e) => setTaskDate(e.target.value)}
                 required
               /> */}
-              {/* <img src={dateSelection} alt="" className="date-picker-icon" /> */}
+             
             </div>
            
             <div className="formButton">

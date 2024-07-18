@@ -179,22 +179,26 @@ button span {
 /* .dateInput::-webkit-calendar-picker-indicator {
   display: none;
 } */
-
-/* .date-picker-icon {
+.dateInput{
+  position: relative;
+}
+.date-picker-icon {
   position: absolute;
-  top: 50px;
-  right: 0;
+  top: 25px;
+  right: 30px;
   transform: translateY(-50%);
   cursor: pointer;
   width: 24px;
   height: 24px;
   pointer-events: none;
   margin-right: -10px;
-} */
+  z-index: 100;
+}
 
 .react-datepicker-wrapper {
   width: 100%;
 }
+
 
 @media (max-width: 600px) {
   .popupInner {
