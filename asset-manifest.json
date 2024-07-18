@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/listloom/static/css/main.6902cc3c.css",
-    "main.js": "/listloom/static/js/main.71749f51.js",
+    "main.css": "/listloom/static/css/main.7df662fc.css",
+    "main.js": "/listloom/static/js/main.6f4b2a27.js",
     "static/js/453.15d747cc.chunk.js": "/listloom/static/js/453.15d747cc.chunk.js",
     "static/media/circle.png": "/listloom/static/media/circle.f096c4c3da7cd522220b.png",
     "static/media/plus.png": "/listloom/static/media/plus.b18112ea8797e1feb3cd.png",
     "static/media/filledCircle.png": "/listloom/static/media/filledCircle.d599ca211ebef311fff3.png",
     "index.html": "/listloom/index.html",
-    "main.6902cc3c.css.map": "/listloom/static/css/main.6902cc3c.css.map",
-    "main.71749f51.js.map": "/listloom/static/js/main.71749f51.js.map",
+    "main.7df662fc.css.map": "/listloom/static/css/main.7df662fc.css.map",
+    "main.6f4b2a27.js.map": "/listloom/static/js/main.6f4b2a27.js.map",
     "453.15d747cc.chunk.js.map": "/listloom/static/js/453.15d747cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6902cc3c.css",
-    "static/js/main.71749f51.js"
+    "static/css/main.7df662fc.css",
+    "static/js/main.6f4b2a27.js"
   ]
 }
