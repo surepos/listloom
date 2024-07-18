@@ -6,6 +6,15 @@ import fs from 'fs';
 import https from 'https';
 
 const app = express();
+const corsOptions = {
+    origin: 'https://surepos.github.io',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  };
+  
+  app.use(cors(corsOptions));
+  
+app.use(express.json());
 const PORT = 8080;
 // const options = {
 //     key: fs.readFileSync('../server.key'),
