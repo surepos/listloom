@@ -2,9 +2,15 @@ import express from 'express';
 import connectDB from './db.js';
 import Task from './Task.js';
 import cors from 'cors';
+import fs from 'fs';
+import https from 'https';
 
 const app = express();
 const PORT = 8080;
+const options = {
+    key: fs.readFileSync('../server.key'),
+    cert: fs.readFileSync('../server.cert')
+};
 
 app.use(cors());
 app.use(express.json());
@@ -127,4 +133,4 @@ app.delete('/task/:id', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+https.createServer(options, app).listen(PORT, () => console.log(`HTTPS Server started on port ${PORT}`));

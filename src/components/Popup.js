@@ -19,7 +19,7 @@ function Popup(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/search', {
+      const response = await axios.post('https://localhost:8080/search', {
         task,
         taskDate,
         displayDate: props.displayDate

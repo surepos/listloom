@@ -55,7 +55,7 @@ function App() {
    useEffect(() => {
        const fetchTasks = async () => {
            try {
-               const response = await axios.get(`http://localhost:8080/tasks/${displayDate.toISOString().split('T')[0]}`);
+               const response = await axios.get(`https://localhost:8080/tasks/${displayDate.toISOString().split('T')[0]}`);
                setTasks(response.data);
                initializeTaskDoneState(response.data); 
            } catch (error) {
@@ -85,7 +85,7 @@ function App() {
 
    const toggleTaskDone = async (taskId) => {
        try {
-           const response = await axios.put(`http://localhost:8080/task/${taskId}`);
+           const response = await axios.put(`https://localhost:8080/task/${taskId}`);
            const updatedTask = response.data;
 
            setTaskDone({
@@ -102,7 +102,7 @@ function App() {
 
    const deleteTask = async (taskId) => {
        try {
-           await axios.delete(`http://localhost:8080/task/${taskId}`);
+           await axios.delete(`https://localhost:8080/task/${taskId}`);
            const updatedTasks = tasks.filter(task => task._id !== taskId);
            setTasks(updatedTasks);
        } catch (error) {
@@ -124,7 +124,7 @@ function App() {
 
    const handleSaveTask = async (taskId) => {
        try {
-           const response = await axios.put(`http://localhost:8080/edit/${taskId}`, {
+           const response = await axios.put(`https://localhost:8080/edit/${taskId}`, {
                task: editedTaskText
            });
            const updatedTask = response.data;
