@@ -56,7 +56,7 @@ function Popup(props) {
               />
             </div>
             <div className="date-picker-container">
-              <label htmlFor="input2">Enter task date Enter task date</label>
+              <label htmlFor="input2">Enter task date</label>
               <br />
               <input
                 className="dateInput"

@@ -167,7 +167,7 @@ button span {
 
 .date-picker-container {
   width: 100%;
-  position: relative;
+  /* position: relative; */
 }
 .date-picker-container input {
   width: 100%;
@@ -178,7 +178,7 @@ button span {
   display: none;
 } */
 
-.date-picker-icon {
+/* .date-picker-icon {
   position: absolute;
   top: 50px;
   right: 0;
@@ -188,7 +188,7 @@ button span {
   height: 24px;
   pointer-events: none;
   margin-right: -10px;
-}
+} */
 
 
 @media (max-width: 600px) {
