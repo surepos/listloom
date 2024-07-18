@@ -4,6 +4,7 @@ import './Popup.css';
 import arrow from "../images/arrow.png"
 import dateSelection from "../images/calendar2.png"
 import closePopup from "../images/close.png"
+import  DatePicker  from 'react-datepicker';
 
 function Popup(props) {
   const [task, setTask] = useState('');
@@ -58,14 +59,23 @@ function Popup(props) {
             <div className="date-picker-container">
               <label htmlFor="input2">Enter task date</label>
               <br />
-              <input
+              <div className="dateInput">
+                <DatePicker
+             
+                selected={taskDate}
+                onChange={(date) => setTaskDate(date)}
+                id="input2"
+                required
+              /></div>
+              
+              {/* <input
                 className="dateInput"
                 type="date"
                 id="input2"
                 value={taskDate}
                 onChange={(e) => setTaskDate(e.target.value)}
                 required
-              />
+              /> */}
               {/* <img src={dateSelection} alt="" className="date-picker-icon" /> */}
             </div>
            

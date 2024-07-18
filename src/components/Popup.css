@@ -192,6 +192,9 @@ button span {
   margin-right: -10px;
 } */
 
+.react-datepicker-wrapper {
+  width: 100%;
+}
 
 @media (max-width: 600px) {
   .popupInner {
