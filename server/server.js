@@ -2,19 +2,15 @@ import express from 'express';
 import connectDB from './db.js';
 import Task from './Task.js';
 import cors from 'cors';
-import fs from 'fs';
-import https from 'https';
+
 
 const app = express();
   
-// app.use(cors(corsOptions));
+
   
 app.use(express.json());
 const PORT = 8080;
-// const options = {
-//     key: fs.readFileSync('../server.key'),
-//     cert: fs.readFileSync('/server.cert')
-// };
+
 
 app.use(cors());
 app.use(express.json());
