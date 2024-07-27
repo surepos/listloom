@@ -13,15 +13,18 @@ const PORT = 8080;
 
 
 app.use(cors());
-app.use(express.json());
+
 
 async function startServer() {
     try {
-      await connectDB();
-      console.log('Connected to database');
+        await connectDB();
+        console.log('Connected to database');
+
+        // Start the server after the database connection has been established
+        app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
     } catch (error) {
-      console.error('Error connecting to database:', error);
-      process.exit(1);
+        console.error('Error connecting to database:', error);
+        process.exit(1);
     }
 
 
@@ -140,6 +143,6 @@ app.delete('/task/:id', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+
 }
 startServer()
