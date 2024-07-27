@@ -15,7 +15,14 @@ const PORT = 8080;
 app.use(cors());
 app.use(express.json());
 
-connectDB();
+async function startServer() {
+    try {
+      await connectDB();
+      console.log('Connected to database');
+    } catch (error) {
+      console.error('Error connecting to database:', error);
+      process.exit(1);
+    }
 
 
 const fetchData = async () => {
@@ -134,3 +141,5 @@ app.delete('/task/:id', async (req, res) => {
     }
 });
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+}
+startServer()
